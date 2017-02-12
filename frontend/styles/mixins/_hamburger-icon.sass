@@ -1,0 +1,37 @@
+$hamburger-icon-line-indent: 6px
+$hamburger-icon-line-thickness: 2px
+$hamburger-icon-line-width: 28px
+
+$hamburger-icon-line-indent-with-thickness: $hamburger-icon-line-thickness + $hamburger-icon-line-indent
+
+@mixin hamburger-icon
+  position: absolute
+
+  &-line-1,
+  &-line-2,
+  &-line-3
+    background: $header-navigation-link-color
+    border-radius: $hamburger-icon-line-thickness
+    height: $hamburger-icon-line-thickness
+    position: absolute
+    transition: transform .25s ease
+    width: $hamburger-icon-line-width
+
+  @for $i from 1 through 3
+    &-line-#{$i}
+      top: $hamburger-icon-line-indent-with-thickness * ($i - 1)
+      
+@mixin hamburger-icon-close
+  &-line-1,
+  &-line-2,
+  &-line-3
+    background: $drawer-navigation-link-color
+
+  &-line-1
+    transform: translateY($hamburger-icon-line-indent-with-thickness) rotate(45deg)
+
+  &-line-2
+    transform: scaleX(0)
+
+  &-line-3
+    transform: translateY(-$hamburger-icon-line-indent-with-thickness) rotate(-45deg)

@@ -1,0 +1,9 @@
+docker-compose.override.yml
+Dockerfile.dev
+**node_modules/
+**.idea/
+**.DS_Store
+
+css/index.css
+js/index.js
+index.html
