@@ -1,0 +1,59 @@
+//.popular
+
+.popular__header
+  @include widget-header
+  @include widget-margin-space
+
+.popular__list
+  @media screen and (max-width: 768px - 1)
+    display: flex
+    flex-wrap: wrap
+
+.popular__item
+  display: block
+  margin-bottom: $gutter-mobile
+  @include widget-padding-space
+
+  @media screen and (min-width: $mobile-breakpoint)
+    margin-bottom: $gutter-non-mobile / 2
+
+  @media screen and (max-width: 768px - 1)
+    flex-basis: 50%
+
+.popular__link
+  display: flex
+  text-decoration: none
+  align-items: center
+
+  @media screen and (max-width: 768px - 1)
+    flex-direction: column
+
+  &:hover
+    text-decoration: underline
+
+.popular__img-wrapper
+  background-size: cover
+  background-position: 50%
+  border-radius: 4px
+  flex-basis: calc((100vw - #{$gutter-mobile * 3}) / 4)
+  flex-grow: 2
+  flex-shrink: 0
+  height: 100px
+  width: 100%
+
+  @media screen and (min-width: 768px)
+    flex-basis: 45%
+
+.popular__text
+  flex-grow: 3
+
+  @media screen and (min-width: $mobile-breakpoint) and (max-width: 768px - 1)
+    font-size: 18px
+
+  @media screen and (max-width: 768px - 1)
+    display: block
+    margin-bottom: $gutter-mobile
+    margin-top: $gutter-mobile / 2
+
+  @media screen and (min-width: 768px)
+    padding-left: $gutter-mobile

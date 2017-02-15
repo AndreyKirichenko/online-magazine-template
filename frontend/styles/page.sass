@@ -1,22 +1,36 @@
 .page
   position: relative
+  overflow: hidden
 
 .page__section
-  @include section
   @include container
   display: flex
   flex-wrap: wrap
+  margin-bottom: $gutter-mobile
+  margin-top: $gutter-mobile
+
+  @media screen and (min-width: $mobile-breakpoint)
+    margin-bottom: $gutter-non-mobile
+    margin-top: $gutter-non-mobile
 
 .page__main,
 .page__side
-  @include billet-space
+  box-sizing: border-box
   flex-shrink: 0
-
-  @media screen and (max-width: $drawer-breakpoint)
-    flex-basis: 100%
+  overflow: hidden
 
 .page__main
-  flex-grow: 2
+  flex-basis: 60%
+  margin-bottom: $gutter-mobile
+
+  @media screen and (max-width: 768px - 1)
+    flex-basis: 100%
+
+  @media screen and (min-width: $mobile-breakpoint)
+    margin-bottom: $gutter-non-mobile
 
 .page__side
-  flex-grow: 1
+  flex-basis: 40%
+
+  @media screen and (max-width: 768px - 1)
+    flex-basis: 100%

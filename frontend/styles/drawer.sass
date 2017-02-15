@@ -1,5 +1,5 @@
 .drawer
-  @media screen and (min-width: $drawer-breakpoint)
+  @media screen and (min-width: $mobile-breakpoint)
     display: none
 
 .drawer__checkbox
@@ -30,7 +30,7 @@
 
 .drawer__hamburger-icon
   @include hamburger-icon
-  left: 16px
+  left: $gutter-mobile
   top: 22px
 
   .drawer__checkbox:checked ~ .drawer__handler &

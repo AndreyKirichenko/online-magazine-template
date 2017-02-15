@@ -1,6 +1,6 @@
 @mixin container
-  @include billet-space
+  @include widget-padding-space
 
-  @media screen and (min-width: 1280px)
-    padding-left: calc(100% - 1244px)
-    padding-right: calc(100% - 1244px)
+  @media screen and (min-width: $desktop-breakpoint - 1)
+    padding-left: calc((100% - #{$desktop-breakpoint}) / 2 + #{$gutter-non-mobile})
+    padding-right: calc((100% - #{$desktop-breakpoint}) / 2 + #{$gutter-non-mobile})

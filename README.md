@@ -1,6 +1,4 @@
-# ohmystartkit v.0.1.0
-
-This is my start kit.
+It is template for one good online magazine about art
 
 ## Command-line installation:
 

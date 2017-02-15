@@ -1,0 +1,42 @@
+.teasers__header
+  @include widget-header
+  @include widget-margin-space
+
+.teasers__list
+  display: flex
+  flex-wrap: wrap
+
+.teasers__item
+  flex-basis: 100%
+
+  @media screen and (min-width: $mobile-breakpoint) and (max-width: 768px - 1)
+    flex-basis: 50%
+
+  @media screen and (min-width: 960px - 1)
+    flex-basis: 50%
+
+.teasers__item-link
+  @include widget-padding-space
+  display: block
+  padding-bottom: $gutter-mobile * 2
+  text-decoration: none
+
+  @media screen and (min-width: $mobile-breakpoint)
+    padding-bottom: $gutter-non-mobile
+
+  &:hover
+    text-decoration: underline
+
+.teasers__item-header
+  margin-bottom: 8px
+
+.teasers__item-img
+  border-radius: 4px
+  width: 100%
+
+.teasers__item-info
+  margin: 4px 0 8px
+
+.teasers__item-text
+  line-height: 24px
+  margin-bottom: 8px

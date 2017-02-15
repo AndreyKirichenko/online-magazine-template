@@ -1,38 +1,60 @@
 .header
   @include container
   background: $header-background-color
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.33)
   box-sizing: border-box
   display: flex
   height: $header-height
   justify-content: space-between
   padding: 0 16px
 
-  @media screen and (max-width: $drawer-breakpoint - 1)
+  @media screen and (max-width: $mobile-breakpoint - 1)
     justify-content: flex-start
     padding-left: $header-height
 
 .header__logo
-  background: #333
   flex-shrink: 0
   height: $header-height
-  margin-right: $gutter
-  width: 96px
+  margin-right: 16px
+  width: 150px
 
-  @media screen and (min-width: 1280px)
-    margin-left: $gutter / 2
+  @media screen and (min-width: $mobile-breakpoint)
+    margin-left: $gutter-non-mobile / 2
+
+  &:before,
+  &:after
+    color: #fff
+    display: block
+
+  &:before
+    font-family: monospace
+    font-size: 36px
+    line-height: 36px
+    font-weight: 300
+    content: 'Мост'
+    margin-top: 8px
+    text-transform: uppercase
+
+  &:after
+    content: 'журнал про культуру'
+    font-size: 12px
+    line-height: 12px
+    white-space: nowrap
 
 .header__navigation-list
   display: flex
 
-  @media screen and (max-width: $drawer-breakpoint - 1)
+  @media screen and (max-width: $mobile-breakpoint - 1)
     display: none
 
-  @media screen and (min-width: 1280px)
-    margin-right: $gutter / 2
+  @media screen and (min-width: $mobile-breakpoint)
+    margin-right: $gutter-non-mobile / 2
 
 .header__navigation-item
   display: inline-block
-  margin: 0 $gutter
+
+  @media screen and (min-width: $desktop-breakpoint)
+    margin: 0 8px
 
   &:first-child
     margin-left: 0
@@ -45,10 +67,12 @@
   display: inline-block
   font-weight: 300
   line-height: $header-height
-  padding: 0 $gutter
+  padding: 0 8px
   position: relative
   text-decoration: none
   text-transform: uppercase
+  white-space: nowrap
+
 
   &:hover
     &:before

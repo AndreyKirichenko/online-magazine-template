@@ -1,0 +1,15 @@
+@mixin widget-padding-space
+  padding-left: $gutter-mobile / 2
+  padding-right: $gutter-mobile / 2
+
+  @media screen and (min-width: $mobile-breakpoint)
+    padding-left: $gutter-non-mobile / 2
+    padding-right: $gutter-non-mobile / 2
+
+@mixin widget-margin-space
+  margin-left: $gutter-mobile / 2
+  margin-right: $gutter-mobile / 2
+
+  @media screen and (min-width: $mobile-breakpoint)
+    margin-left: $gutter-non-mobile / 2
+    margin-right: $gutter-non-mobile / 2
