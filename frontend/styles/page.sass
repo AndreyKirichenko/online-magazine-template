@@ -9,7 +9,7 @@
   margin-bottom: $gutter-mobile
   margin-top: $gutter-mobile
 
-  @media screen and (min-width: $mobile-breakpoint)
+  @media screen and (min-width: $small-tablet-breakpoint)
     margin-bottom: $gutter-non-mobile
     margin-top: $gutter-non-mobile
 
@@ -23,14 +23,14 @@
   flex-basis: 60%
   margin-bottom: $gutter-mobile
 
-  @media screen and (max-width: 768px - 1)
+  @media screen and (max-width: $medium-tablet-breakpoint - 1)
     flex-basis: 100%
 
-  @media screen and (min-width: $mobile-breakpoint)
+  @media screen and (min-width: $small-tablet-breakpoint)
     margin-bottom: $gutter-non-mobile
 
 .page__side
   flex-basis: 40%
 
-  @media screen and (max-width: 768px - 1)
+  @media screen and (max-width: $medium-tablet-breakpoint - 1)
     flex-basis: 100%
