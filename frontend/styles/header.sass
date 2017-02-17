@@ -8,7 +8,7 @@
   justify-content: space-between
   padding: 0 16px
 
-  @media screen and (max-width: $mobile-breakpoint - 1)
+  @media screen and (max-width: $small-tablet-breakpoint - 1)
     justify-content: flex-start
     padding-left: $header-height
 
@@ -18,7 +18,7 @@
   margin-right: 16px
   width: 150px
 
-  @media screen and (min-width: $mobile-breakpoint)
+  @media screen and (min-width: $small-tablet-breakpoint)
     margin-left: $gutter-non-mobile / 2
 
   &:before,
@@ -44,16 +44,16 @@
 .header__navigation-list
   display: flex
 
-  @media screen and (max-width: $mobile-breakpoint - 1)
+  @media screen and (max-width: $small-tablet-breakpoint - 1)
     display: none
 
-  @media screen and (min-width: $mobile-breakpoint)
+  @media screen and (min-width: $small-tablet-breakpoint)
     margin-right: $gutter-non-mobile / 2
 
 .header__navigation-item
   display: inline-block
 
-  @media screen and (min-width: $desktop-breakpoint)
+  @media screen and (min-width: $small-desktop-breakpoint)
     margin: 0 8px
 
   &:first-child
