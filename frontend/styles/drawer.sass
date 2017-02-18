@@ -67,6 +67,10 @@
   text-transform: uppercase
   white-space: nowrap
 
-  &:hover
-    background: $drawer-navigation-link-hover-background-color
-    color: $drawer-navigation-link-hover-color
+.drawer__navigation-link:hover,
+.drawer__navigation-link_active
+  background: $drawer-navigation-link-hover-background-color
+  color: $drawer-navigation-link-hover-color
+
+.drawer__navigation-link_active
+  cursor: default
