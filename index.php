@@ -8,7 +8,7 @@
                         <?php while ( have_posts() ) : the_post(); ?>
                             <li class="teasers__item">
 
-                            <a href="<?php echo get_permalink(); ?>" class="teasers__item-link">
+                            <a href="<?php echo my_permalink(); ?>" class="teasers__item-link">
                                 <?php
                                     $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'your_thumb_handle' );
                                 ?>
