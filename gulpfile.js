@@ -53,9 +53,12 @@ function build (type) {
     .pipe(buffer())
     .pipe(uglify())
     .pipe(gulp.dest('./js/'));
+    // .pipe(gulp.dest('./../../my/php53/web/wp-content/themes/mostmagazine/js/'));
 
     gulp.src(['./frontend/templates/' + type + '.jade'])
-      .pipe(jade())
+      .pipe(jade({
+        pretty: true
+      }))
       .pipe(gulp.dest('./'));
 
     gulp.src(['./frontend/styles/' + type + '.sass'])
@@ -66,7 +69,8 @@ function build (type) {
         cascade: false
       }))
       .pipe(cleanCSS({compatibility: 'ie9'}))
-      .pipe(gulp.dest('./css/'))
+      .pipe(gulp.dest('./css/'));
+      // .pipe(gulp.dest('./../../my/php53/web/wp-content/themes/mostmagazine/css/'));
     };
 }
 
