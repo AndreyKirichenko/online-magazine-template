@@ -36,6 +36,10 @@ function wpdocs_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
+function my_permalink() {
+    echo substr(get_permalink(), strlen(get_option('home')));
+}
+
 /*
 * Pagination
 */
