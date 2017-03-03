@@ -2,8 +2,9 @@
   position: relative
   overflow: hidden
 
-.page__section
-  @include container
+.page__section,
+.page__section-limited
+  @include widget-padding-space
   display: flex
   flex-wrap: wrap
   margin-bottom: $gutter-mobile
@@ -12,6 +13,9 @@
   @media screen and (min-width: $small-tablet-breakpoint)
     margin-bottom: $gutter-non-mobile
     margin-top: $gutter-non-mobile
+
+.page__section-limited
+  @include container
 
 .page__main,
 .page__side
@@ -38,6 +42,42 @@
 .page__post
   max-width: 800px
   margin: 0 auto
+
+  @media screen and (max-width: $medium-tablet-breakpoint - 1)
+    flex-basis: 100%
+    order: 0
+
+.page__post-before,
+.page__post-after
+  @include widget-padding-space
+  color: $color-bright
+  flex-basis: calc((100% - 800px) / 2)
+  font-weight: 300
+  overflow: hidden
+
+  @media screen and (max-width: $small-desktop-breakpoint - 1)
+    flex-basis: 50%
+    order: 1
+
+  @media screen and (min-width: $small-desktop-breakpoint)
+    @include widget-margin-space
+    position: fixed
+
+  a
+    color: $color-bright
+    margin-bottom: 16px
+    margin-top: 6px
+
+
+  a:hover
+    color: $color-darkest
+
+.page__post-before
+  left: 0
+
+.page__post-after
+  text-align: right
+  right: 0
 
 .post__main-image
   margin-bottom: 16px

@@ -1,6 +1,12 @@
 <?php get_header(); ?>
     <div class="page">
         <section class="page__section">
+            <aside class="page__post-before">
+                <?php
+                    previous_post_link('%link', '« Предыдущая статья');
+                ?>
+            </aside>
+
             <main class="page__post">
                 <?php while ( have_posts() ) : the_post(); ?>
                     <article class="post">
@@ -30,6 +36,12 @@
                     </article>
                 <?php endwhile; ?>
             </main>
+
+            <aside class="page__post-after">
+                <?php
+                    next_post_link('%link', 'Следующая статья »');
+                ?>
+            </aside>
         </section>
     </div>
 <?php get_footer(); ?>
