@@ -10,7 +10,6 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <?php wp_head(); ?>
 
-    <link rel="stylesheet" href="/wp-content/themes/mostmag/css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;amp;subset=cyrillic-ext" rel="stylesheet">
     <script src="https://use.fontawesome.com/2f1a761a4b.js"></script>
     <script async="true" src="/wp-content/themes/mostmag/js/index.js"></script>
