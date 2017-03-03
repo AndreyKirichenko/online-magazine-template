@@ -29,7 +29,7 @@
 
                         <?php
                         $content = get_the_content();
-                        $content = preg_replace( '/(width|height|sizes)=\"\d*\"\s/', "", $content );
+                        $content = preg_replace( '/(width|height|sizes)=/', "", $content );
                         $content = apply_filters('the_content', $content);
                         echo $content;
                         ?>
