@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     <div class="page">
-        <section class="page__section">
+        <section class="page__section-limited">
             <main class="page__main">
                 <div class="teasers">
                     <h3 class="teasers__header">Читайте в номере</h3>
@@ -31,10 +31,6 @@
                                 </div>
 
                                 <div class="teasers__item-button">Читать</div>
-<!--                                <div class="teasers__item-button-wrapper">-->
-<!--                                    <div class="teasers__item-button">Читать</div>-->
-<!--                                </div>-->
-
                             </a>
                         </li>
                         <?php endwhile; ?>
