@@ -9,10 +9,12 @@
                             <li class="teasers__item">
 
                             <a href="<?php echo my_permalink(); ?>" class="teasers__item-link">
-                                <?php
-                                    $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'your_thumb_handle' );
-                                ?>
-                                <img src="<?php echo $thumbnail['0']; ?>" class="teasers__item-img">
+                                <div class="teasers__item-img-wrapper">
+                                    <?php
+                                        $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'your_thumb_handle' );
+                                    ?>
+                                    <img src="<?php echo $thumbnail['0']; ?>" class="teasers__item-img">
+                                </div>
                                 <div class="teasers__item-info">
                                     <div class="info">
                                         <time datetime="<?php the_time('d-m-Y'); ?>" pubtime="pubtime" class="info__pubtime"><?php the_time('d-m-Y'); ?></time>
@@ -29,6 +31,10 @@
                                 </div>
 
                                 <div class="teasers__item-button">Читать</div>
+<!--                                <div class="teasers__item-button-wrapper">-->
+<!--                                    <div class="teasers__item-button">Читать</div>-->
+<!--                                </div>-->
+
                             </a>
                         </li>
                         <?php endwhile; ?>

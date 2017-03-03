@@ -7,6 +7,7 @@
   flex-wrap: wrap
 
 .teasers__item
+  display: flex
   flex-basis: 100%
 
   @media screen and (min-width: $small-tablet-breakpoint) and (max-width: $medium-tablet-breakpoint - 1)
@@ -18,19 +19,46 @@
 .teasers__item-link
   @include widget-padding-space
   display: block
-  padding-bottom: $gutter-mobile * 2
+  padding-bottom: $gutter-mobile * 2 + 36px
+  position: relative
   text-decoration: none
 
   @media screen and (min-width: $small-tablet-breakpoint)
-    padding-bottom: $gutter-non-mobile
+    padding-bottom: $gutter-non-mobile + 36px
 
 .teasers__item-header
   line-height: 24px
   margin-bottom: 8px
 
-.teasers__item-img
+.teasers__item-img-wrapper
+  align-items: center
   border-radius: 4px
-  width: 100%
+  display: flex
+  margin-bottom: 14px
+  max-height: 138px
+  overflow: hidden
+  //position: relative
+  //
+  //@media screen and (min-width: $small-tablet-breakpoint) and (max-width: $medium-tablet-breakpoint)
+  //  align-items: flex-end
+  //
+  //@media screen and (min-width: 960px)
+  //  align-items: flex-end
+
+  //&:after
+  //  content: ''
+  //  margin-top: 33%
+  //
+  //  @media screen and (min-width: $small-tablet-breakpoint) and (max-width: $medium-tablet-breakpoint)
+  //    margin-top: 100px
+  //
+  //  @media screen and (min-width: 960px)
+  //    margin-top: 100px
+
+.teasers__item-img
+  //position: absolute
+  max-width: 100%
+  //min-width: 100%
 
 .teasers__item-info
   margin: 4px 0 8px
@@ -39,6 +67,16 @@
   line-height: 24px
   margin-bottom: 8px
 
+  p
+    margin: 0
+
 .teasers__item-button
+  @include widget-margin-space
   @include button
-  width: 100%
+  bottom: $gutter-mobile * 2
+  left: 0
+  right: 0
+  position: absolute
+
+  @media screen and (min-width: $small-tablet-breakpoint)
+    bottom: $gutter-non-mobile

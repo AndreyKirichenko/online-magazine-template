@@ -45,7 +45,7 @@ function my_permalink() {
 */
 
 // $range - сколько страниц выводить до и после текущей страницы
-function oriolo_pagination($pages = '', $range = 6)
+function oriolo_pagination($pages = '', $range = 1)
 {
     $showitems = ($range * 2)+1;
     global $paged;
