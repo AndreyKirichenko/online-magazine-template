@@ -8,10 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <title><?php wp_title('«', true, 'right'); ?> <?php bloginfo('name'); ?></title>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+
     <?php wp_head(); ?>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;amp;subset=cyrillic-ext" rel="stylesheet">
-    <script src="https://use.fontawesome.com/2f1a761a4b.js"></script>
+    <script async="true" type="text/javascript" src="//vk.com/js/api/openapi.js?140"></script>
+    <script async="true" src="https://use.fontawesome.com/2f1a761a4b.js"></script>
     <script async="true" src="/wp-content/themes/mostmag/js/index.js"></script>
 </head>
 <body class="layout">
@@ -38,6 +40,7 @@
     </div>
     <div class="layout__header">
         <header class="header">
+            <div class="header__imaginator"></div>
             <div title="Site logo" class="header__logo"></div>
             <nav class="header__navigation">
                 <?
