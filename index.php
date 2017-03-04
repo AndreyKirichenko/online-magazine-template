@@ -18,7 +18,6 @@
                                 <div class="teasers__item-info">
                                     <div class="info">
                                         <time datetime="<?php the_time('d-m-Y'); ?>" pubtime="pubtime" class="info__pubtime"><?php the_time('d-m-Y'); ?></time>
-                                        <div class="info__category"></div>
                                     </div>
                                 </div>
 

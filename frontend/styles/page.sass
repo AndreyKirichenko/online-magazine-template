@@ -8,11 +8,11 @@
   display: flex
   flex-wrap: wrap
   margin-bottom: $gutter-mobile
-  margin-top: $gutter-mobile
+  margin-top: $gutter-mobile / 2
 
   @media screen and (min-width: $small-tablet-breakpoint)
     margin-bottom: $gutter-non-mobile
-    margin-top: $gutter-non-mobile
+    margin-top: $gutter-non-mobile / 2
 
 .page__section-limited
   @include container
@@ -64,11 +64,10 @@
     position: fixed
 
   a
-    color: $color-bright
+    color: $color-mid
     display: inline-block
     margin-bottom: 16px
     margin-top: 6px
-
 
   a:hover
     color: $color-darkest

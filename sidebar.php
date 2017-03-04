@@ -59,3 +59,9 @@
         </li>
     </ul>
 </div>
+
+<div class="vk-group">
+    <h3 class="vk-group__header">Консолидация</h3>
+
+    <div class="vk-group__widget" id="vk_groups"></div>
+</div>

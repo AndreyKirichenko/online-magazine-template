@@ -7,16 +7,37 @@
   height: $header-height
   justify-content: space-between
   padding: 0 16px
+  position: relative
 
   @media screen and (max-width: $small-tablet-breakpoint - 1)
     justify-content: flex-start
     padding-left: $header-height
 
+.header__imaginator
+  background-image: url(http://paragliding4.me/images/pic/paraplan-konstrukcija-advance.jpg)
+  //background-image: url(http://mostmag.ru/wp-content/uploads/2016/12/211.jpg)
+  //background-image: url(https://cs541605.userapi.com/c836333/v836333858/494ba/g1fjsb_5bt0.jpg)
+  background-position: 100%
+  background-size: cover
+  bottom: 0
+  height: 442px
+  left: 0
+  position: absolute
+  opacity: .15
+  width: 100%
+
+  @media screen and (max-width: $small-tablet-breakpoint - 1)
+    opacity: .1
+
+  //@media screen // and (min-width: $small-tablet-breakpoint)
+
 .header__logo
   flex-shrink: 0
   height: $header-height
   margin-right: 16px
+  position: relative
   width: 150px
+  z-index: 1
 
   @media screen and (min-width: $small-tablet-breakpoint)
     margin-left: $gutter-non-mobile / 2
@@ -43,6 +64,8 @@
 
 .header__navigation-list
   display: flex
+  position: relative
+  z-index: 1
 
   @media screen and (max-width: $small-tablet-breakpoint - 1)
     display: none
