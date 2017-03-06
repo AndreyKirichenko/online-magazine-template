@@ -3,7 +3,7 @@
         <section class="page__section">
             <aside class="page__post-before">
                 <?php
-                    previous_post_link('%link', '« Предыдущая статья');
+                    previous_post_link('%link', 'Предыдущая статья');
                 ?>
             </aside>
 
@@ -35,11 +35,15 @@
                         ?>
                     </article>
                 <?php endwhile; ?>
+
+                <div class="vk-group">
+                    <div class="vk-group__widget" id="vk_groups"></div>
+                </div>
             </main>
 
             <aside class="page__post-after">
                 <?php
-                    next_post_link('%link', 'Следующая статья »');
+                    next_post_link('%link', 'Следующая статья');
                 ?>
             </aside>
         </section>

@@ -5,7 +5,6 @@ const babelify = require('babelify');
 const browserify = require('browserify');
 const buffer = require('vinyl-buffer');
 const cleanCSS = require('gulp-clean-css');
-const connect = require('gulp-connect');
 const fs = require('fs');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
@@ -13,13 +12,6 @@ const jade = require('gulp-jade');
 const sass = require('gulp-sass');
 const source = require('vinyl-source-stream');
 const uglify = require('gulp-uglify');
-
-gulp.task('server', function() {
-  connect.server({
-    root: ['./'],
-    port: process.env.NODE_PORT || 9999
-  });
-});
 
 function watch (type) {
   return function () {
@@ -53,7 +45,6 @@ function build (type) {
     .pipe(buffer())
     .pipe(uglify())
     .pipe(gulp.dest('./js/'));
-    // .pipe(gulp.dest('./../../my/php53/web/wp-content/themes/mostmagazine/js/'));
 
     gulp.src(['./frontend/templates/' + type + '.jade'])
       .pipe(jade({
@@ -70,14 +61,13 @@ function build (type) {
       }))
       .pipe(cleanCSS({compatibility: 'ie9'}))
       .pipe(gulp.dest('./css/'));
-      // .pipe(gulp.dest('./../../my/php53/web/wp-content/themes/mostmagazine/css/'));
     };
 }
 
 function createTasks (type) {
   gulp.task(type + '-watch', watch(type));
   gulp.task(type + '-build', build(type));
-  gulp.task(type, [type + '-build', type + '-watch', 'server']);
+  gulp.task(type, [type + '-build', type + '-watch']);
 }
 
 createTasks('index');
