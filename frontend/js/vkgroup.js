@@ -1,8 +1,12 @@
-const CLASS_NAME = 'vk_groups';
+const ELEMENT_ID = 'vk_groups';
 
 export default function VKGroup() {
+  if (!document.getElementById(ELEMENT_ID)) {
+    return;
+  }
+
   window.VK.Widgets.Group(
-    CLASS_NAME,
+    ELEMENT_ID,
     {
       mode: 3,
       width: 'auto',
@@ -11,5 +15,4 @@ export default function VKGroup() {
     },
     39455285
   );
-
 }

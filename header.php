@@ -12,9 +12,11 @@
     <?php wp_head(); ?>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;amp;subset=cyrillic-ext" rel="stylesheet">
-    <script async="true" type="text/javascript" src="//vk.com/js/api/openapi.js?140"></script>
-    <script async="true" src="https://use.fontawesome.com/2f1a761a4b.js"></script>
-    <script async="true" src="/wp-content/themes/mostmag/js/index.js"></script>
+    <script defer="true" type="text/javascript" src="//vk.com/js/api/openapi.js?140"></script>
+    <script defer="true" src="https://use.fontawesome.com/2f1a761a4b.js"></script>
+    <script defer="true" src="/wp-content/themes/mostmag/js/index.js"></script>
+
+    <?php get_template_part( 'yandex-metrika' ); ?>
 </head>
 <body class="layout">
 <div class="layout__outer-wrapper">
@@ -40,8 +42,8 @@
     </div>
     <div class="layout__header">
         <header class="header">
-            <div class="header__imaginator"></div>
-            <div title="Site logo" class="header__logo"></div>
+            <div class="header__imaginator js-header__imaginator"></div>
+            <a href="/" title="Журнал Мост" class="header__logo"></a>
             <nav class="header__navigation">
                 <?
                     wp_nav_menu(
@@ -59,5 +61,5 @@
         </header>
     </div>
 
-    <div class="layout__inner-wrapper">
+    <div class="layout__inner-wrapper js-layout__inner-wrapper">
         <div class="layout__page">

@@ -9,6 +9,10 @@
 
                 <?php wp_footer(); ?>
             </div>
+
+            <div class="layout__scroll-top">
+                <div class="scroll-top js-scroll-top">Наверх</div>
+            </div>
         </div>
     </div>
 </body>

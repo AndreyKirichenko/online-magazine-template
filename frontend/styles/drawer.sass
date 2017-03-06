@@ -14,7 +14,7 @@
     position: absolute
     transition: opacity .25s ease
     width: 0
-    z-index: 1
+    z-index: 2
 
   .drawer__checkbox:checked ~ &
     &:before
@@ -26,7 +26,7 @@
   height: $header-height
   position: absolute
   width: $header-height + 32px
-  z-index: 3
+  z-index: 4
 
 .drawer__hamburger-icon
   @include hamburger-icon
@@ -44,7 +44,7 @@
   transform: translate3d(0, 0, 0)
   transition: transform .25s ease
   width: $drawer-width
-  z-index: 2
+  z-index: 3
 
   .drawer__checkbox:checked ~ &
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.33)

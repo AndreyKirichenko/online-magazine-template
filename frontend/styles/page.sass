@@ -8,7 +8,7 @@
   display: flex
   flex-wrap: wrap
   margin-bottom: $gutter-mobile
-  margin-top: $gutter-mobile / 2
+  margin-top: $gutter-mobile
 
   @media screen and (min-width: $small-tablet-breakpoint)
     margin-bottom: $gutter-non-mobile
@@ -68,6 +68,7 @@
     display: inline-block
     margin-bottom: 16px
     margin-top: 6px
+    text-decoration: none
 
   a:hover
     color: $color-darkest
@@ -75,9 +76,27 @@
 .page__post-before
   left: 0
 
+  a
+    &:before
+      @include fa-icon
+      content: '\f177'
+      font-size: 12px
+      line-height: 12px
+      margin-right: 8px
+      text-decoration: none
+
 .page__post-after
   text-align: right
   right: 0
+
+  a
+    &:after
+      @include fa-icon
+      content: '\f178'
+      font-size: 12px
+      line-height: 12px
+      margin-left: 8px
+      text-decoration: none
 
 .post__main-image
   margin-bottom: 16px
