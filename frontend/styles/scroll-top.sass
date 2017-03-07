@@ -9,7 +9,9 @@
   font-weight: 300
   line-height: 24px
   margin: 32px
+  opacity: 0
   padding: 8px 16px
+  transition: opacity .25s ease
 
   &:after
     @include fa-icon
@@ -17,3 +19,6 @@
     font-size: 12px
     line-height: 12px
     margin-left: 8px
+
+.scroll-top__visible
+  opacity: 1
