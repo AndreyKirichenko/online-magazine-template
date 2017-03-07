@@ -1,5 +1,13 @@
 .vk-group
-  @include widget-margin-space
+  @include widget-padding-space
 
 .vk-group__header
   @include widget-header
+
+.vk-group__widget
+  padding-bottom: $gutter-mobile / 4
+  padding-top: $gutter-mobile / 4
+
+  @media screen and (min-width: $small-tablet-breakpoint)
+    padding-bottom: $gutter-non-mobile / 4
+    padding-top: $gutter-non-mobile / 4

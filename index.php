@@ -28,8 +28,6 @@
                                 <div class="teasers__item-text">
                                     <?php the_excerpt(); ?>
                                 </div>
-
-                                <div class="teasers__item-button">Читать</div>
                             </a>
                         </li>
                         <?php endwhile; ?>

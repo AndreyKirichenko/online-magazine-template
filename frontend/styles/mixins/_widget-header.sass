@@ -1,5 +1,11 @@
 @mixin widget-header
   border-bottom: 1px solid $color-mid
   border-top: 1px solid $color-mid
+  margin-bottom: $gutter-mobile / 4
+  margin-top: $gutter-mobile / 4
   padding-bottom: 8px
   padding-top: 8px
+
+  @media screen and (min-width: $small-tablet-breakpoint)
+    margin-bottom: $gutter-non-mobile / 4
+    margin-top: $gutter-non-mobile / 4
