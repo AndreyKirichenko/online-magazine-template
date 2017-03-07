@@ -1,6 +1,6 @@
 import Hammer from 'hammerjs'
 
-const CLASS_NAMES = {
+const SELECTORS = {
   DRAWER_CHECKBOX: '.drawer__checkbox',
   HIT_AREA: '.layout__outer-wrapper'
 };
@@ -10,8 +10,8 @@ export default function Drawer() {
     return;
   }
 
-  let checkbox = document.querySelector(CLASS_NAMES.DRAWER_CHECKBOX);
-  let hitArea = document.querySelector(CLASS_NAMES.HIT_AREA);
+  let checkbox = document.querySelector(SELECTORS.DRAWER_CHECKBOX);
+  let hitArea = document.querySelector(SELECTORS.HIT_AREA);
 
   let mc = new Hammer(hitArea);
 
