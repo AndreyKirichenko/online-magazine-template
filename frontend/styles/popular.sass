@@ -9,24 +9,28 @@
 
 .popular__item
   display: block
-  margin-bottom: $gutter-mobile
-  @include widget-padding-space
 
-  @media screen and (min-width: $small-tablet-breakpoint)
-    margin-bottom: $gutter-non-mobile / 2
 
   @media screen and (max-width: $medium-tablet-breakpoint - 1)
     flex-basis: 50%
 
 .popular__link
+  @include widget-padding-space
+  align-items: flex-start
   display: flex
+  padding-bottom: $gutter-mobile / 4
+  padding-top: $gutter-mobile / 4
   text-decoration: none
-  align-items: center
+
+  @media screen and (min-width: $small-tablet-breakpoint)
+    padding-bottom: $gutter-non-mobile / 4
+    padding-top: $gutter-non-mobile / 4
 
   @media screen and (max-width: $medium-tablet-breakpoint - 1)
     flex-direction: column
 
   &:hover
+    opacity: .9
     text-decoration: underline
 
 .popular__img-wrapper
@@ -40,8 +44,14 @@
   width: 100%
 
   @media screen and (min-width: $medium-tablet-breakpoint)
-    flex-basis: 45%
     flex-grow: 0
+
+  @media screen and (min-width: $medium-tablet-breakpoint) and (max-width: $large-tablet-breakpoint - 1)
+    flex-basis: 64px
+    height: 64px
+
+  @media screen and (min-width: $large-tablet-breakpoint)
+    flex-basis: 50%
 
 .popular__text
   flex-grow: 3
