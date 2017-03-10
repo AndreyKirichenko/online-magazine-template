@@ -1,4 +1,4 @@
-It is template for one good online magazine about art
+It is template for mostmag.ru
 
 ## Command-line installation:
 

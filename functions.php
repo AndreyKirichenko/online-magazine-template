@@ -22,10 +22,6 @@ if (function_exists('add_theme_support')) {
 
 show_admin_bar(false);
 
-if ( function_exists( 'add_theme_support' ) ) {
-    add_theme_support( 'post-thumbnails' );
-}
-
 function wpdocs_custom_excerpt_length( $length ) {
     return 12;
 }
@@ -36,21 +32,10 @@ function wpdocs_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
+
 function my_permalink() {
     echo substr(get_permalink(), strlen(get_option('home')));
 }
-
-//function next_post_link( $format = '%link &raquo;', $link = '%title', $in_same_term = false, $excluded_terms = '', $taxonomy = 'category' ) {
-//    echo get_next_post_link( $format, $link, $in_same_term, $excluded_terms, $taxonomy );
-//}
-//
-//function previous_post_link( $format = '&laquo; %link', $link = '%title', $in_same_term = false, $excluded_terms = '', $taxonomy = 'category' ) {
-//    echo get_previous_post_link( $format, $link, $in_same_term, $excluded_terms, $taxonomy );
-//}
-
-/*
-* Pagination
-*/
 
 // $range - сколько страниц выводить до и после текущей страницы
 function oriolo_pagination($pages = '', $range = 1)
