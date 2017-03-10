@@ -11,9 +11,11 @@
                             <a href="<?php echo my_permalink(); ?>" class="teasers__item-link">
                                 <div class="teasers__item-img-wrapper">
                                     <?php
-                                        $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'your_thumb_handle' );
+                                        $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),'medium' );
+                                        $thumbnail_x2 = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),'large' );
+
                                     ?>
-                                    <img src="<?php echo $thumbnail['0']; ?>" class="teasers__item-img">
+                                    <img src="<?php echo $thumbnail['0']; ?>" srcset="<?php echo $thumbnail_x2['0']; ?> 2x" class="teasers__item-img">
                                 </div>
                                 <div class="teasers__item-info">
                                     <div class="info">

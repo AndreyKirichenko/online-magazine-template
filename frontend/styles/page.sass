@@ -58,6 +58,7 @@
   @media screen and (max-width: $small-desktop-breakpoint - 1)
     flex-basis: 50%
     order: 1
+    margin-top: $gutter-non-mobile
 
   @media screen and (min-width: $small-desktop-breakpoint)
     @include widget-margin-space
@@ -66,9 +67,11 @@
   a
     color: $color-mid
     display: inline-block
-    margin-bottom: 16px
-    margin-top: 6px
     text-decoration: none
+
+    @media screen and (min-width: $small-desktop-breakpoint)
+      margin-bottom: 16px
+      margin-top: 6px
 
   a:hover
     color: $color-darkest
