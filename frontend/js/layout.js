@@ -1,3 +1,6 @@
+import Drawer from './drawer'
+import ScrollThrottle from './scroll-trottle'
+
 const SELECTORS = {
   HEADER_IMAGINATOR: '.js-header__imaginator',
   INNER_WRAPPER: '.js-layout__inner-wrapper',
@@ -5,6 +8,8 @@ const SELECTORS = {
 };
 
 export default function Layout() {
+  Drawer();
+  ScrollThrottle();
   scrollTopInit();
 }
 

@@ -1,12 +1,10 @@
-import Drawer from './drawer'
+import Gallery from './gallery'
 import Layout from './layout'
-import ScrollThrottle from './scroll-trottle'
 import VKGroup from './vkgroup'
 
 function App() {
-  Drawer();
+  Gallery();
   Layout();
-  ScrollThrottle();
   VKGroup();
 }
 
