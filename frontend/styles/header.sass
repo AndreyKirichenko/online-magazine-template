@@ -14,7 +14,7 @@
     padding-left: $header-height
 
 .header__imaginator
-  background-image: url(http://mostmag.ru/wp-content/uploads/2016/12/211.jpg)
+  background-image: url(/wp-content/themes/mostmag/img/most-header-bg.jpg)
   background-position: 100%
   background-size: cover
   bottom: 0
@@ -39,25 +39,14 @@
   @media screen and (min-width: $small-tablet-breakpoint)
     margin-left: $gutter-non-mobile / 2
 
-  &:before,
-  &:after
-    color: $color-brightest
-    display: block
-
   &:before
-    font-family: monospace
-    font-size: 36px
-    line-height: 36px
-    font-weight: 300
-    content: 'Мост'
-    margin-top: 8px
-    text-transform: uppercase
-
-  &:after
-    content: 'журнал про культуру'
-    font-size: 12px
-    line-height: 12px
-    white-space: nowrap
+    background: url(/wp-content/themes/mostmag/img/most-logo.svg)
+    background-size: 120px
+    display: block
+    content: ''
+    margin-top: 18px
+    width: 120px
+    height: 24px
 
   &:hover
     opacity: .9
