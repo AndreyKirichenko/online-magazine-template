@@ -65,3 +65,5 @@
 
     <div class="vk-group__widget" id="vk_groups"></div>
 </div>
+
+<?php get_search_form(); ?>

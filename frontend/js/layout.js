@@ -1,5 +1,4 @@
 const SELECTORS = {
-  HEADER_IMAGINATOR: '.js-header__imaginator',
   INNER_WRAPPER: '.js-layout__inner-wrapper',
   SCROLL_TOP: '.js-scroll-top',
 };
