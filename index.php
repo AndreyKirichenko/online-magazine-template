@@ -9,14 +9,11 @@
                             <li class="teasers__item">
 
                             <a href="<?php echo my_permalink(); ?>" class="teasers__item-link">
-                                <div class="teasers__item-img-wrapper">
-                                    <?php
-                                        $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),'medium' );
-                                        $thumbnail_x2 = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),'large' );
-
-                                    ?>
-                                    <img src="<?php echo $thumbnail['0']; ?>" srcset="<?php echo $thumbnail_x2['0']; ?> 2x" class="teasers__item-img">
-                                </div>
+                                <?php
+                                $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),'medium' );
+                                $thumbnail_x2 = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ),'large' );
+                                ?>
+                                <div class="teasers__item-img-wrapper" style="background-image: url(<?php echo $thumbnail_x2['0']; ?>)"></div>
                                 <div class="teasers__item-info">
                                     <div class="info">
                                         <time datetime="<?php the_time('d-m-Y'); ?>" pubtime="pubtime" class="info__pubtime"><?php the_time('d-m-Y'); ?></time>

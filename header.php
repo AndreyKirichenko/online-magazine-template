@@ -11,10 +11,11 @@
 
     <?php wp_head(); ?>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;amp;subset=cyrillic-ext" rel="stylesheet">
     <script defer="true" type="text/javascript" src="//vk.com/js/api/openapi.js?140"></script>
     <script defer="true" src="https://use.fontawesome.com/2f1a761a4b.js"></script>
     <script defer="true" src="/wp-content/themes/mostmag/js/index.js"></script>
+    <link rel="stylesheet" href="/wp-content/themes/mostmag/css/index.css?1" />
+
 
     <?php get_template_part( 'yandex-metrika' ); ?>
 </head>
@@ -42,7 +43,6 @@
     </div>
     <div class="layout__header">
         <header class="header">
-            <div class="header__imaginator js-header__imaginator"></div>
             <a href="/" title="Журнал Мост" class="header__logo"></a>
             <nav class="header__navigation">
                 <?

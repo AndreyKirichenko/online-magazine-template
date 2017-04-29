@@ -18,6 +18,7 @@
 
 .teasers__item-link
   @include widget-padding-space
+  cursor: pointer
   display: block
   padding-bottom: $gutter-mobile / 4
   padding-top: $gutter-mobile / 4
@@ -30,7 +31,6 @@
 
   &:hover
     opacity: .9
-    text-decoration: underline
 
 .teasers__item-header
   font-size: 18px
@@ -38,15 +38,18 @@
   margin-bottom: 8px
 
 .teasers__item-img-wrapper
-  align-items: center
+  background-position: 50% 50%
+  background-size: cover
   border-radius: 4px
-  display: flex
+  display: block
   margin-bottom: 14px
   max-height: 320px
   overflow: hidden
 
-.teasers__item-img
-  width: 100%
+  &:before
+    content: ''
+    display: block
+    margin-top: 66%
 
 .teasers__item-info
   margin: 4px 0 8px

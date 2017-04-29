@@ -20,8 +20,6 @@ if (function_exists('add_theme_support')) {
     add_theme_support('menus');
 }
 
-show_admin_bar(false);
-
 function wpdocs_custom_excerpt_length( $length ) {
     return 12;
 }
